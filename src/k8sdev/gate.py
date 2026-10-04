@@ -11,5 +11,6 @@ def check(body):
     if image.endswith(":latest") or image == "latest":
         failed.append("image_tag_latest")
 
-    reps = int(body.get("replicas") or 0)\n    if not 1 <= reps <= 5: failed.append("replicas")
+    reps = int(body.get("replicas") or 0)
+    if not 1 <= reps <= 5: failed.append("replicas")
     return {"passed": not failed, "failed": failed, "applied": False}
