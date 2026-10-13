@@ -1,5 +1,12 @@
 # Kubernetes Developer Portal
 
+## Overview
+
+A small deployment check for Kubernetes workloads. The `/check` endpoint passes a request only when replicas are between 1 and 5 and the image is not tagged `latest`, giving developers a quick gate before a manifest moves on. A `/v1` ops API adds workspaces, tenant isolation, job approval and audit records, and tests cover both the gate and the ops API.
+
+- **Built with:** Python, pytest, Docker, Docker Compose, GitHub Actions
+- **Scope:** Local laptop proof with tests; it calls no hosted model and applies no production changes.
+
 <!-- project-guide:start -->
 ## Project guide
 
